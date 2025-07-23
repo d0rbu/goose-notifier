@@ -552,6 +552,19 @@ index 130b5df6dd..e5d417a18c 100644
      "slack-morphism",
      "serenity"
  ]
+diff --git a/crates/goose-cli/src/cli.rs b/crates/goose-cli/src/cli.rs
+index af50bbb20e..3e76a5b8a8 100644
+--- a/crates/goose-cli/src/cli.rs
++++ b/crates/goose-cli/src/cli.rs
+@@ -634,7 +634,7 @@ enum Command {
+     },
+ 
+     /// Benchmark agent performance
+-    #[command(about = "Benchmark agent performance", visible_alias = "bench")]
++    #[command(about = "Benchmark agent performance")]
+     Bench {
+         #[command(subcommand)]
+         cmd: BenchCommand,
 diff --git a/crates/goose-cli/src/notifier/intelligence.rs b/crates/goose-cli/src/notifier/intelligence.rs
 index f458a42050..0bd43790d6 100644
 --- a/crates/goose-cli/src/notifier/intelligence.rs
@@ -1227,7 +1240,7 @@ index 97f4c6f177..15d43c2111 100644
  ## Configuration
  
 diff --git a/goose-notifier.patch b/goose-notifier.patch
-index b436ec93d3..5831ce71af 100644
+index b436ec93d3..b22b09d4eb 100644
 --- a/goose-notifier.patch
 +++ b/goose-notifier.patch
 @@ -1,6731 +0,0 @@
